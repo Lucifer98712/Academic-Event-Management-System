@@ -1,0 +1,171 @@
+/* UserManagement.css */
+.user-management {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-header h2 {
+    color: #1A289F;
+    margin: 0;
+  }
+  
+  .users-table {
+    overflow-x: auto;
+  }
+  
+  .users-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .users-table th {
+    background-color: #f8f9ff;
+    padding: 1rem;
+    text-align: left;
+    color: #666;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .users-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .status-badge.active {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+  
+  .status-badge.inactive {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
+  
+  .status-badge.pending {
+    background-color: #fef9c3;
+    color: #854d0e;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .view-button,
+  .delete-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .view-button {
+    background-color: #f0f2ff;
+    color: #1A289F;
+  }
+  
+  .view-button:hover {
+    background-color: #e0e4ff;
+  }
+  
+  .delete-button {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
+  
+  .delete-button:hover {
+    background-color: #fecaca;
+  }
+  
+  .user-details {
+    margin: 1.5rem 0;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .detail-item:last-child {
+    border-bottom: none;
+  }
+  
+  .detail-item .label {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .detail-item .value {
+    color: #1A289F;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+  }
+  
+  .close-button-secondary {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .close-button-secondary:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: #1A289F;
+  }
+  
+  .error-message {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .user-management {
+      padding: 1rem;
+    }
+  
+    .detail-item {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .view-button,
+    .delete-button {
+      width: 100%;
+    }
+  }
