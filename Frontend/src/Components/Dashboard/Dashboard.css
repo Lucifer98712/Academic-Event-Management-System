@@ -1,0 +1,225 @@
+/* Dashboard.css */
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1A289F;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dashboard-layout {
+    display: flex;
+    min-height: calc(100vh - 64px);
+  }
+  
+  .dashboard-sidebar {
+    width: 250px;
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+  
+  .sidebar-item.active {
+    background-color: #f0f2ff;
+    color: #1A289F;
+    border-right: 3px solid #1A289F;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #f5f7ff;
+  }
+  
+  .dashboard-main {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .stats-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .stats-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stats-card h3 {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .stats-card p {
+    color: #1A289F;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-layout {
+      flex-direction: column;
+    }
+  
+    .dashboard-sidebar {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  
+    .sidebar-item {
+      padding: 0.75rem 1rem;
+    }
+  
+    .dashboard-main {
+      padding: 1rem;
+    }
+  }
+
+  /* Add these styles to your existing Dashboard.css */
+
+.user-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    min-width: 200px;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .dropdown-header {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .user-name {
+    display: block;
+    font-weight: 600;
+    color: #1A289F;
+    margin-bottom: 0.25rem;
+  }
+  
+  .user-role {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: none;
+    color: #dc2626;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #fee2e2;
+  }
+  
+  .dropdown-item svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add responsive styles */
+  @media (max-width: 768px) {
+    .dropdown-menu {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      border-radius: 12px 12px 0 0;
+      animation: slideUp 0.3s ease-out;
+    }
+  
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
