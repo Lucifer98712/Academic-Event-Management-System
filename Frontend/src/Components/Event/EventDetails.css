@@ -1,0 +1,396 @@
+/* EventDetails.css */
+.event-details-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.event-details-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #1a289f;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #151f7a;
+}
+
+.event-header {
+  margin-bottom: 2rem;
+}
+
+.event-detail-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.event-detail-title {
+  font-size: 2.5rem;
+  color: #1a289f;
+  margin-bottom: 1rem;
+}
+
+.event-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.event-main-details {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-detail-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.event-metadata {
+  display: grid;
+  gap: 1rem;
+}
+
+.metadata-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.metadata-label {
+  font-weight: bold;
+  color: #666;
+}
+
+.registration-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registration-section h2 {
+  color: #1a289f;
+  margin-bottom: 1.5rem;
+}
+
+.register-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1a289f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #151f7a;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  color: #1a289f;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-input {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1a289f;
+  box-shadow: 0 0 0 2px rgba(26, 40, 159, 0.1);
+}
+
+.form-input.error {
+  border-color: #dc2626;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #1a289f;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.submit-button:hover {
+  background: #151f7a;
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.registration-status {
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.registration-status.success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.registration-status.error {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #1a289f;
+  font-size: 1.2rem;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc2626;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .event-info {
+    grid-template-columns: 1fr;
+  }
+
+  .event-detail-image {
+    height: 300px;
+  }
+
+  .event-detail-title {
+    font-size: 2rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cancel-button,
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* Animation for modal */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Improved form input focus styles */
+.form-input:focus {
+  outline: none;
+  border-color: #1a289f;
+  box-shadow: 0 0 0 3px rgba(26, 40, 159, 0.1);
+}
+
+.login-prompt {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9ff;
+  border-radius: 6px;
+}
+
+.login-prompt button {
+  color: #1a289f;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.already-registered {
+  text-align: center;
+  padding: 1rem;
+  background: #dcfce7;
+  color: #166534;
+  border-radius: 6px;
+}
+
+/* Container for the rating buttons */
+.rating-buttons {
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+  justify-content: center; /* Center align the buttons */
+  margin-top: 10px;
+}
+
+/* Base style for both Like and Dislike buttons */
+.rate-button {
+  background-color: #007bff; /* Default button color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 20px; /* Padding for size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Hover effect for buttons */
+.rate-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Disabled state for buttons (when already clicked) */
+.rate-button.disabled {
+  background-color: #ccc; /* Grayed-out color */
+  cursor: not-allowed; /* Prevent clicking */
+  opacity: 0.7; /* Slightly transparent */
+}
+
+/* Specific styles for the "Like" button */
+.rate-button.like {
+  background-color: #28a745; /* Green color for Like */
+}
+
+.rate-button.like:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Specific styles for the "Dislike" button */
+.rate-button.dislike {
+  background-color: #dc3545; /* Red color for Dislike */
+}
+
+.rate-button.dislike:hover {
+  background-color: #bd2130; /* Darker red on hover */
+}
